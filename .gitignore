@@ -6,3 +6,5 @@
 !.zshrc
 !.vimrc
 !README.md
+!.config/starship.toml
+!.config/nvim/init.vim
