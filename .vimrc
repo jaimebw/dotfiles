@@ -1,4 +1,5 @@
 set runtimepath+=~/.vim_runtime
+
 :set number
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
