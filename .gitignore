@@ -1,10 +1,12 @@
 # Ignore everything
-*
+/*
+!/.config
+/.config/*
+!/.config/startship.toml
+!/.config/nvim
 # Except
 !.gitignore
 !Brewfile
 !.zshrc
 !.vimrc
 !README.md
-!.config/starship.toml
-!.config/nvim/init.vim
