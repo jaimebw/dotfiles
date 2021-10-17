@@ -1,5 +1,6 @@
 # Ignore everything
 /*
+*.toml
 !/.config
 /.config/*
 !/.config/startship.toml

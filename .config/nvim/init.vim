@@ -19,11 +19,17 @@ set hidden  " Permitir cambiar de buffers sin tener que guardarlos
 set ignorecase  " Ignorar mayúsculas al hacer una búsqueda
 set smartcase  " No ignorar mayúsculas si la palabra a buscar contiene mayúsculas
 
-set spelllang=en,es  " Corregir palabras usando diccionarios en inglés y español
-
+set spelllang=en  " Corregir palabras usando diccionarios en inglés y español
 
 set background=dark  " Fondo del tema: light o dark
 colorscheme zellner  " Nombre del tema
+" Cerras cosas automaticamente
+inoremap { {}<Esc>ha
+inoremap ( ()<Esc>ha
+inoremap [ []<Esc>ha
+inoremap " ""<Esc>ha
+inoremap ' ''<Esc>ha
+inoremap ` ``<Esc>ha
 
 " Autocompletion
 let g:ale_completion_enabled = 1
