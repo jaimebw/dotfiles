@@ -5,9 +5,11 @@
 /.config/*
 !/.config/startship.toml
 !/.config/nvim
+!/.config/terminal
 # Except
 !.gitignore
 !Brewfile
 !.zshrc
 !.vimrc
 !README.md
+.DS_Store
