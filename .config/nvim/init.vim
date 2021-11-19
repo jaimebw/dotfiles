@@ -18,7 +18,7 @@ set hidden  " Permitir cambiar de buffers sin tener que guardarlos
 
 set ignorecase  " Ignorar mayúsculas al hacer una búsqueda
 set smartcase  " No ignorar mayúsculas si la palabra a buscar contiene mayúsculas
-
+:imap çç <Esc>
 
 " Default value is "normal", Setting this option to "high" or "low" does use the
 " same Solarized palette but simply shifts some values up or down in order to
@@ -62,9 +62,27 @@ inoremap ` ``<Esc>ha
 " Autocompletion
 let g:ale_completion_enabled = 1
 let g:ale_completion_autoimport = 1
+let g:ale_python_auto_poetry = 1
+let b:ale_fixers = ["black"]
 set omnifunc=ale#completion#OmniFunc
-
+let g:plug_home = stdpath('data') . '/plugged'
+call plug#begin()
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'neovim/nvim-lspconfig'
+call plug#end()
 " Put these lines at the very end of your vimrc file.
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
+
+
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
