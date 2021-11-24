@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jaime/.oh-my-zsh"
+export GEM_HOME="$HOME/.gem"
 source $HOME/.poetry/env
 
 # Set name of the theme to load --- if set to "random", it will
@@ -100,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="nvim"
+alias vscode="open -a 'Visual Studio Code'"
 alias vim="nvim"
 alias g="git"
 alias hide="chflags hidden"
@@ -123,3 +125,6 @@ unset __conda_setup
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
