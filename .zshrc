@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="nvim"
 alias vscode="open -a 'Visual Studio Code'"
-alias vim="nvim"
+alias vim="/Users/jaime/.local/bin/lvim"
 alias g="git"
 alias hide="chflags hidden"
 alias gc="git commit -b"

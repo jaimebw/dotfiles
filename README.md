@@ -10,5 +10,7 @@ git clone https://github.com/jaimebw/dotfiles.git
 * [Ale](https://github.com/dense-analysis/ale#installation)
 * [TreSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * [VimPlug](https://github.com/nvim-treesitter/nvim-treesitter)
+## Lunar Vim
+* [Luna Vim](https://www.lunarvim.org/#opinionated)
 ## Terminal theme
 * [Terminal Solarized](https://github.com/tomislav/osx-terminal.app-colors-solarized) 
