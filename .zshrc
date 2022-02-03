@@ -5,7 +5,7 @@
 export ZSH="/Users/jaime/.oh-my-zsh"
 export GEM_HOME="$HOME/.gem"
 source $HOME/.poetry/env
-
+python3 tidy_desktop.py
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -75,34 +75,11 @@ ZSH_THEME="spaceship"
 plugins=( zsh-autosuggestions git pip pep8 pyenv python)
 
 source $ZSH/oh-my-zsh.sh
-# User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias v="nvim"
 alias vscode="open -a 'Visual Studio Code'"
-alias vim="/Users/jaime/.local/bin/lvim"
+alias vim="nvim"
+alias v="nvim"
+alias pomodoro="python3 pomodoro.py"
 alias g="git"
 alias hide="chflags hidden"
 alias gc="git commit -b"
@@ -128,3 +105,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="$HOME/.poetry/bin:$PATH"
